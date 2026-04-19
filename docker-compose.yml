@@ -1,0 +1,74 @@
+services:
+  flipper-iphone-olx:
+    build: ./flipper-iphone-olx
+    env_file: ./flipper-iphone-olx/.env
+    volumes:
+      - iphone_olx_data:/app/data
+    restart: unless-stopped
+
+  flipper-iphone-allegro-lokalnie:
+    build: ./flipper-iphone-allegro-lokalnie
+    env_file: ./flipper-iphone-allegro-lokalnie/.env
+    volumes:
+      - iphone_al_data:/app/data
+    restart: unless-stopped
+
+  flipper-iphone-vinted:
+    build: ./flipper-iphone-vinted
+    env_file: ./flipper-iphone-vinted/.env
+    volumes:
+      - iphone_vinted_data:/app/data
+    restart: unless-stopped
+
+  flipper-konsole-olx:
+    build: ./flipper-konsole-olx
+    env_file: ./flipper-konsole-olx/.env
+    volumes:
+      - console_olx_data:/app/data
+    restart: unless-stopped
+
+  flipper-konsole-allegro-lokalnie:
+    build: ./flipper-konsole-allegro-lokalnie
+    env_file: ./flipper-konsole-allegro-lokalnie/.env
+    volumes:
+      - console_al_data:/app/data
+    restart: unless-stopped
+
+  flipper-konsole-vinted:
+    build: ./flipper-konsole-vinted
+    env_file: ./flipper-konsole-vinted/.env
+    volumes:
+      - console_vinted_data:/app/data
+    restart: unless-stopped
+
+  flipper-macbook-olx:
+    build: ./flipper-macbook-olx
+    env_file: ./flipper-macbook-olx/.env
+    volumes:
+      - macbook_olx_data:/app/data
+    restart: unless-stopped
+
+  flipper-macbook-allegro-lokalnie:
+    build: ./flipper-macbook-allegro-lokalnie
+    env_file: ./flipper-macbook-allegro-lokalnie/.env
+    volumes:
+      - macbook_al_data:/app/data
+    restart: unless-stopped
+
+  flipper-macbook-vinted:
+    build: ./flipper-macbook-vinted
+    env_file: ./flipper-macbook-vinted/.env
+    volumes:
+      - macbook_vinted_data:/app/data
+    restart: unless-stopped
+
+volumes:
+  iphone_olx_data:
+  iphone_al_data:
+  iphone_vinted_data:
+  console_olx_data:
+  console_al_data:
+  console_vinted_data:
+  macbook_olx_data:
+  macbook_al_data:
+  macbook_vinted_data:
